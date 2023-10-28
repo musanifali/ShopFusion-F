@@ -46,12 +46,14 @@ const SignupForm = ({ onSwitchForm }: Props) => {
         }}
       >
         <div className={`w-full max-w-md bg-white rounded-lg shadow-lg p-8 `}>
-          <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Sign Up</h2>
           <Form
             name="signupForm"
             className="space-y-4"
             initialValues={{ remember: true }}
             onFinish={onFinish}
+            labelCol={{ span: 24 }} // Set label width to 100%
+            wrapperCol={{ span: 24 }} // Set input field width to 100%
           >
             <Form.Item
               label="Name"
