@@ -1,10 +1,17 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Auth from "./components/Auth";
-import LoginForm from "./components/LoginForm/LoginForm";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <>
-      <Auth />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Auth />} />
+          <Route path="/user1" element={<Home />} />
+        </Routes>
+      </Router>
+      {/* <Auth /> */}
     </>
   );
 };
